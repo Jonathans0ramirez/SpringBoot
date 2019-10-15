@@ -28,7 +28,7 @@ public class EmployeeController {
 //    }
 
     @ApiOperation(value = "Add an employee")
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.POST)
     public Employee create(@ApiParam(value = "Employee object store in database table", required = true) @RequestBody Employee employee) {
         return employeeRepository.save(employee);
     }
@@ -89,7 +89,7 @@ public class EmployeeController {
         ,
     @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
-    @RequestMapping(method = RequestMethod.GET, value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Employee> empleados() {
         return employeeRepository.findAll();
     }
