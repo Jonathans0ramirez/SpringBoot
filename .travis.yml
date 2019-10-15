@@ -1,0 +1,8 @@
+language: java
+jdk:
+ - openjdk9
+services:
+ - mongodb
+ 
+before_install:
+  - chmod +x mvnw
