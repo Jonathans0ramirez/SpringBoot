@@ -89,13 +89,8 @@ public class EmployeeController {
         ,
     @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
-    @RequestMapping(method = RequestMethod.GET, value = "/emp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Employee> empleados() {
-        return employeeRepository.findAll();
-    }
-
-    @GetMapping("/findAll")
-    public List<Employee> retrieveAllEmployees() {
         return employeeRepository.findAll();
     }
 }
