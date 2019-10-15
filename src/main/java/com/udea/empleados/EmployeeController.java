@@ -22,10 +22,10 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @RequestMapping("/")
-    String home() {
-        return "Bienvenidos a la UdeA ";
-    }
+//    @RequestMapping("/")
+//    String home() {
+//        return "Bienvenidos a la UdeA ";
+//    }
 
     @ApiOperation(value = "Add an employee")
     @RequestMapping(value = "/", method = RequestMethod.POST)
