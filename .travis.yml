@@ -7,8 +7,7 @@ before_install:
 - chmod +x mvnw
 deploy:
   provider: heroku
-  api_key:
-    secure: $HEROKU_API
+  api_key: $HEROKU_API
   app: springbootback
   on:
     repo: Jonathans0ramirez/SpringBoot
