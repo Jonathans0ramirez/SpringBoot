@@ -1,8 +1,14 @@
 language: java
 jdk:
- - openjdk9
+- openjdk9
 services:
- - mongodb
- 
+- mongodb
 before_install:
-  - chmod +x mvnw
+- chmod +x mvnw
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_API
+  app: SpringBoot
+  on:
+    repo: Jonathans0ramirez/SpringBoot
